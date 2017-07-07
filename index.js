@@ -1,1 +1,1 @@
-console.log('hola')
+const db = require('./config/database')
