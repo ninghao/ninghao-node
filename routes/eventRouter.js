@@ -1,11 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const EventController = require('../controllers/EventController')
 
 router.route('/events')
-  .get((request, response) => {
-    response.send({
-      message: 'hello events ~'
-    })
-  })
+  .get(EventController.index)
 
 module.exports = router
