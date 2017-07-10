@@ -6,4 +6,7 @@ router.route('/events')
   .get(EventController.index)
   .post(EventController.store)
 
+router.route('/events/:id')
+  .get(EventController.show)
+
 module.exports = router
