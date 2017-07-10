@@ -33,9 +33,17 @@ const update = (request, response) => {
     .then(document => response.send(document))
 }
 
+const destroy = (request, response) => {
+  const id = request.params.id
+
+  Event.findByIdAndRemove(id)
+    .then(document => response.send(document))
+}
+
 module.exports = {
   index,
   store,
   show,
-  update
+  update,
+  destroy
 }
